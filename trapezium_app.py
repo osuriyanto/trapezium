@@ -200,7 +200,8 @@ def main():
 
         st.download_button(
             "Download plot (PNG)", data=buf,
-            file_name=f"{facility}_{market}_trapezium.png", mime="image/png"
+            file_name=f"{facility}_{market}_trapezium.png", mime="image/png",
+            key=f"download_png_{facility}_{market}"
         )
 
         st.pyplot(fig, clear_figure=True)
@@ -219,10 +220,11 @@ def main():
         st.download_button(
             "Download plot (PNG)", data=buf,
             file_name=f"{facility}_{market}_trapezium.png", mime="image/png",
-            key=f"download_png_{facility}_{market}")
+            )
 
 
 if __name__ == "__main__":
     main()
+
 
 
