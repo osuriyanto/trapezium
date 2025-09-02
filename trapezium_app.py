@@ -199,8 +199,8 @@ def main():
 
             c1, c2 = st.columns(2)
             if reduced is not None:
-                c1.metric("Reduced service qty (MW)", f"{reduced:.3f}")
-                c2.metric("Service qty reduction (MW)", f"{reduction:.3f}")
+                c1.metric("Reduced service qty (MW)", f"{reduced:.2f}")
+                c2.metric("Service qty reduction (MW)", f"{reduction:.2f}")
             else:
                 st.info("No FCESS max service quantity reduction.")
 
@@ -214,4 +214,5 @@ def main():
         
 if __name__ == "__main__":
     main()
+
 
