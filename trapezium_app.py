@@ -124,7 +124,7 @@ def plot_fcess_trapezium(
 
 def main():
     st.set_page_config(page_title="FCESS Trapezium", layout="centered")
-    st.title("FCESS Trapezium Visualiser")
+    st.title("FCESS Trapezium Visualization")
 
     with st.sidebar:
         st.header("General")
@@ -224,3 +224,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
