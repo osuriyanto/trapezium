@@ -124,7 +124,7 @@ def plot_fcess_trapezium(
 
 def main():
     st.set_page_config(page_title="FCESS Trapezium", layout="centered")
-    st.title("FCESS Trapezium Visualiser")
+    st.title("FCESS Trapezium Visualisation")
 
     with st.sidebar:
         st.header("General")
@@ -202,7 +202,7 @@ def main():
                 c1.metric("Reduced service qty (MW)", f"{reduced:.3f}")
                 c2.metric("Service qty reduction (MW)", f"{reduction:.3f}")
             else:
-                st.info("No reduction. Adjusted height equals original H.")
+                st.info("No FCESS max service quantity reduction.")
 
             # Exactly one download button, unique key
             st.download_button(
@@ -211,22 +211,7 @@ def main():
                 key="download_png_unique"
             )
         st.pyplot(fig, clear_figure=True)
-
-        #c1, c2 = st.columns(2)
-        #if reduced is not None:
-        #    c1.metric("Reduced service qty (MW)", f"{reduced:.3f}")
-        #    c2.metric("Service qty reduction (MW)", f"{reduction:.3f}")
-        #else:
-        #    st.info("No reduction. Adjusted height equals original H.")
-
-        # Download button
-        #buf = io.BytesIO()
-        #fig.savefig(buf, format="png", dpi=200, bbox_inches="tight")
-        #st.download_button(
-        #    "Download plot (PNG)", data=buf.getvalue(),
-        #    file_name=f"{facility}_{market}_trapezium.png", mime="image/png"
-        #)
-
-
+        
 if __name__ == "__main__":
     main()
+
