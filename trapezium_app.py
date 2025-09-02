@@ -128,8 +128,8 @@ def main():
 
     with st.sidebar:
         st.header("General")
-        facility = st.text_input("Facility name", value="ALCOA_WGP")
-        market = st.text_input("FCESS market", value="Reg Raise")
+        facility = st.text_input("Facility name", value="Facility name")
+        market = st.text_input("FCESS market", value="Market type")
         contain = st.checkbox("Contain adjusted within original", value=True)
         tol = st.number_input("Tolerance", value=1e-6, min_value=0.0, format="%.6f")
         st.markdown("---")
@@ -225,6 +225,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
